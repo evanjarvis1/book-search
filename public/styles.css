@@ -1,0 +1,115 @@
+body {
+    /* background-image: url("pexels-stanislav-kondratiev-2908984.jpg"); */
+    background: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url("pexels-stanislav-kondratiev-2908984.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    font-size: medium;
+}
+
+header {
+    background-color: rgb(255, 255, 255, 0.9);
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    font-size: x-large;
+    z-index: 6;
+}
+
+.site-title {
+    display: flex;
+    position: relative;
+    left: 30vw;
+    justify-content: center;
+    text-align: center;
+}
+
+.navbar {
+    margin-right: 3vw;
+}
+
+h1 {
+    text-align: center;
+    font-size: 10vh;
+}
+
+
+
+#search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 40vw;
+    top: 40vh;
+}
+#search-bar {
+    width: 20vw;
+}
+
+#submit-button {
+    margin-top: 1vh;
+    width: 7vw;
+    height: 5vh;
+    color: white;
+    background-color: transparent;
+    border: .25vw solid white;
+    font-size: large;
+}
+
+#submit-button:hover {
+    background-color: white;
+    color: black;
+}
+
+#flex {
+    position: absolute;
+    top: 60vh;
+    left: 30vw;
+}
+
+#flex-2 {
+    position: absolute;
+    left: 30vw;
+}
+
+#search-results {
+    width: 40vw;
+    /* border: 2px solid white; */
+    border-radius: 12px;
+    background-color: rgb(255, 255, 255, .4);
+    display: flex;
+    position: relative;
+    top: 80 vh;
+    left: 400 vw;
+
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+
+}
+
+#list-results {
+    width: 40vw;
+    border: 2px solid white;
+    border-radius: 12px;
+    background-color: rgb(255, 255, 255, .4);
+    display: flex;
+    position: absolute;
+    top: 80 vh;
+    left: 40 vw;
+
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+
+}
+
+.individual-result {
+    flex: 50%;
+    text-align: center;
+    margin-top: 4vh;
+}
+
