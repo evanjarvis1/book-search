@@ -39,8 +39,8 @@ const searchFunction = (event) => {
                 id: [i],
                 title: bookInfo.volumeInfo.title,
                 subtitle: bookInfo.volumeInfo.subtitle,
-                img: bookInfo.volumeInfo.imageLinks.smallThumbnail
-
+                img: bookInfo.volumeInfo.imageLinks.smallThumbnail,
+                isClicked: false
             }
             resultsArr.push(bookObject)
             console.log(bookInfo.volumeInfo.title + " " + bookInfo.volumeInfo.subtitle)
@@ -57,11 +57,18 @@ const addToList = (id) => {
     theChosenOne = resultsArr[id]
     console.log(theChosenOne)
     console.log(id)
+    if (theChosenOne.isClicked === false){
     //alert(`${id}`)
     axios.post("http://localhost:4000/server.js/bookList", theChosenOne)
     .then(res => {
         alert(res.data);
 });
+
+    resultsArr[id].isClicked = true
+
+    } else {
+        alert(`This book is already in your list!`)
+    }
 }
 
 submitBtn.addEventListener('click', searchFunction)
